@@ -13,7 +13,7 @@ export default async function Page({ params, searchParams }: { params: Promise<{
 
   let Component = null;
   try {
-    const { default: Lesson } = await import(`@/lib/mdx/learn/${chapter}/${chapterType}/${slug}.mdx`);
+    const { default: Lesson } = await import(`../../../../lib/mdx/learn/${chapter}/${chapterType}/${slug}.mdx`);
     Component = Lesson;
   } catch (error) {
     return redirect(`/learn/${chapter}`);
