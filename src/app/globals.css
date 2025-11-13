@@ -1,22 +1,233 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root.lightBlue {
+  --foreground: #0d1117;
+  --background: #e6edf3;
+  --foregroundNav: #e6edf3;
+  --primary: #2f4db8;
+  --secondary: #161b22;
+  --button: rgba(47, 77, 184, 0.2);
+  --buttonActive: rgba(47, 77, 184, 0.45);
+  --buttonText: #171622;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(47, 77, 184, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(47, 77, 184, 0.4);
+  --accent: #2d97b6;
+  --borderColor: #2e3440;
+}
+
+:root.lightEmerald {
+  --foreground: #0f1a17;
+  --background: #eafff7;
+  --foregroundNav: #eafff7;
+  --primary: #167a57;
+  --secondary: #162822;
+  --button: rgba(22, 122, 87, 0.2);
+  --buttonActive: rgba(22, 122, 87, 0.45);
+  --buttonText: #171622;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(22, 122, 87, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(22, 122, 87, 0.4);
+  --accent: #2bbd92;
+  --borderColor: #234438;
+}
+
+:root.lightCrimson {
+  --foreground: #1c0f12;
+  --background: #ffe9ec;
+  --foregroundNav: #ffe9ec;
+  --primary: #7b1e2e;
+  --secondary: #2a161b;
+  --button: rgba(123, 30, 46, 0.2);
+  --buttonActive: rgba(123, 30, 46, 0.45);
+  --buttonText: #171622;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(123, 30, 46, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(123, 30, 46, 0.4);
+  --accent: #c24458;
+  --borderColor: #4d2a34;
+}
+
+:root.lightOlive {
+  --foreground: #12160e;
+  --background: #eef9e6;
+  --foregroundNav: #eef9e6;
+  --primary: #3f5518;
+  --secondary: #1b2214;
+  --button: rgba(63, 85, 24, 0.2);
+  --buttonActive: rgba(63, 85, 24, 0.45);
+  --buttonText: #171622;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(63, 85, 24, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(63, 85, 24, 0.4);
+  --accent: #8aaa4f;
+  --borderColor: #2c3820;
+}
+
+:root.lightSunset {
+  --foreground: #1a1317;
+  --background: #fff4ec;
+  --foregroundNav: #fff4ec;
+  --primary: #8c3b22;
+  --secondary: #25191e;
+  --button: rgba(140, 59, 34, 0.2);
+  --buttonActive: rgba(140, 59, 34, 0.45);
+  --buttonText: #171622;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(140, 59, 34, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(140, 59, 34, 0.4);
+  --accent: #c2703d;
+  --borderColor: #3c262b;
+}
+
+:root.lightPurple {
+  --foreground: #171622;
+  --background: #f2f1ff;
+  --foregroundNav: #f2f1ff;
+  --primary: #5d54ff;
+  --secondary: #27233a;
+  --button: rgba(93, 84, 255, 0.2);
+  --buttonActive: rgba(93, 84, 255, 0.45);
+  --buttonText: #171622;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(93, 84, 255, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(141, 133, 255, 0.4);
+  --accent: #ff5cf4;
+  --borderColor: #322f47;
+}
+
+:root.darkBlue {
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --foregroundNav: #e6edf3;
+  --primary: #2f4db8;
+  --secondary: #161b22;
+  --button: rgba(47, 77, 184, 0.2);
+  --buttonActive: rgba(47, 77, 184, 0.45);
+  --buttonText: #ffffff;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(47, 77, 184, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(47, 77, 184, 0.4);
+  --accent: #2d97b6;
+  --borderColor: #2e3440;
+}
+
+:root.darkEmerald {
+  --background: #0f1a17;
+  --foreground: #eafff7;
+  --foregroundNav: #eafff7;
+  --primary: #167a57;
+  --secondary: #162822;
+  --button: rgba(22, 122, 87, 0.2);
+  --buttonActive: rgba(22, 122, 87, 0.45);
+  --buttonText: #ffffff;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(22, 122, 87, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(22, 122, 87, 0.4);
+  --accent: #2bbd92;
+  --borderColor: #234438;
+}
+
+:root.darkCrimson {
+  --background: #1c0f12;
+  --foreground: #ffe9ec;
+  --foregroundNav: #ffe9ec;
+  --primary: #7b1e2e;
+  --secondary: #2a161b;
+  --button: rgba(123, 30, 46, 0.2);
+  --buttonActive: rgba(123, 30, 46, 0.45);
+  --buttonText: #ffffff;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(123, 30, 46, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(123, 30, 46, 0.4);
+  --accent: #c24458;
+  --borderColor: #4d2a34;
+}
+
+:root.darkOlive {
+  --background: #12160e;
+  --foreground: #eef9e6;
+  --foregroundNav: #eef9e6;
+  --primary: #3f5518;
+  --secondary: #1b2214;
+  --button: rgba(63, 85, 24, 0.2);
+  --buttonActive: rgba(63, 85, 24, 0.45);
+  --buttonText: #ffffff;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(63, 85, 24, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(63, 85, 24, 0.4);
+  --accent: #8aaa4f;
+  --borderColor: #2c3820;
+}
+
+:root.darkSunset {
+  --background: #1a1317;
+  --foreground: #fff4ec;
+  --foregroundNav: #fff4ec;
+  --primary: #8c3b22;
+  --secondary: #25191e;
+  --button: rgba(140, 59, 34, 0.2);
+  --buttonActive: rgba(140, 59, 34, 0.45);
+  --buttonText: #ffffff;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(140, 59, 34, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(140, 59, 34, 0.4);
+  --accent: #c2703d;
+  --borderColor: #3c262b;
+}
+
+:root.darkPurple {
+  --background: #171622;
+  --foreground: #f2f1ff;
+  --foregroundNav: #f2f1ff;
+  --primary: #5d54ff;
+  --secondary: #27233a;
+  --button: rgba(93, 84, 255, 0.2);
+  --buttonActive: rgba(93, 84, 255, 0.45);
+  --buttonText: #ffffff;
+  --buttonNav: rgba(255, 255, 255, 0.12);
+  --buttonNavActive: rgba(93, 84, 255, 0.4);
+  --buttonNavText: #ffffff;
+  --buttonNavBorder: rgba(141, 133, 255, 0.4);
+  --accent: #ff5cf4;
+  --borderColor: #322f47;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foregroundNav: var(--foregroundNav);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-button: var(--button);
+  --color-buttonActive: var(--buttonActive);
+  --color-buttonText: var(--buttonText);
+  --color-buttonNav: var(--buttonNav);
+  --color-buttonNavActive: var(--buttonNavActive);
+  --color-buttonNavText: var(--buttonNavText);
+  --color-buttonNavBorder: var(--buttonNavBorder);
+  --color-accent: var(--accent);
+  --color-borderColor: var(--borderColor);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 body {
@@ -25,10 +236,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 9px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #056d66;
+  background: var(--secondary);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -36,8 +247,11 @@ body {
 }
 
 @layer components {
+  * {
+    @apply text-foreground overflow-hidden;
+  }
   input {
-    @apply appearance-none outline-none border-none bg-gray-100 w-full;
+    @apply appearance-none outline-none border-none bg-button w-full py-1 px-2 rounded-md text-foreground;
   }
   h1 {
     @apply text-2xl md:text-3xl lg:text-4xl;
@@ -52,15 +266,28 @@ body {
     @apply text-base md:text-lg lg:text-xl;
   }
   p,
+  span,
+  label,
+  input,
+  button,
+  td,
+  li {
+    @apply text-sm sm:text-lg font-normal;
+  }
   button {
-    @apply text-sm sm:text-base;
+    @apply cursor-pointer p-2 rounded-md;
   }
   h1,
   h2,
   h3,
   h4,
-  p,
-  button {
+  h5 {
     @apply font-bold;
+  }
+  td {
+    @apply font-normal;
+  }
+  li {
+    @apply list-none;
   }
 }

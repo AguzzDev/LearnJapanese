@@ -1,24 +1,8 @@
 import { useGame } from "@/context/GameContext";
-import {
-  GameFiltersEnum,
-  GameKanaTypeEnum,
-  GameModeEnum,
-  GameTypeEnum,
-} from "@/interfaces";
+import { GameFiltersEnum, ButtonMenuProps } from "@/interfaces";
 import { ButtonOne } from "./ButtonOne";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  value?: GameTypeEnum | GameKanaTypeEnum | GameModeEnum;
-  mode: GameFiltersEnum;
-}
-
-export const ButtonMenu = ({
-  children,
-  mode,
-  value,
-  onClick,
-  ...props
-}: ButtonProps) => {
+export const ButtonMenu = ({ children, mode, value, onClick, ...props }: ButtonMenuProps) => {
   const { selectMode, updateSelectMode } = useGame();
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -29,18 +13,10 @@ export const ButtonMenu = ({
     updateSelectMode({ mode, value: value!, selectModeValue: value! });
   };
 
-  const coincidence =
-    selectMode?.mode === value ||
-    selectMode?.type === value ||
-    selectMode?.kanaType == value;
+  const coincidence = selectMode?.mode === value || selectMode?.type === value || selectMode?.subType == value || selectMode?.subType2 == value;
 
   return (
-    <ButtonOne
-      {...props}
-      onClick={handleClick}
-      customActive={mode !== GameFiltersEnum.START_BUTTON}
-      activeValue={coincidence}
-    >
+    <ButtonOne {...props} onClick={handleClick} activeValue={coincidence}>
       {children}
     </ButtonOne>
   );

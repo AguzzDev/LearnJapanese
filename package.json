@@ -1,6 +1,6 @@
 {
-  "name": "kana-test",
-  "version": "0.1.0",
+  "name": "learnjapanese",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,19 +8,24 @@
     "start": "next start",
     "lint": "next lint",
     "cy:open": "cypress open",
-    "cy:run":"cypress run"
+    "cy:run": "cypress run"
   },
   "dependencies": {
-    "next": "15.3.2",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "@heroicons/react": "^2.2.0",
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.0.0",
+    "@types/mdx": "^2.0.13",
+    "next": "^15.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3",
     "@tailwindcss/postcss": "4",
     "@types/node": "20",
-    "@types/react": "19",
-    "@types/react-dom": "19",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
     "cypress": "14.4.0",
     "eslint": "9",
     "eslint-config-next": "15.3.2",
