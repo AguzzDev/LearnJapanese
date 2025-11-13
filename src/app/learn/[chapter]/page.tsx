@@ -11,18 +11,18 @@ export default function Page() {
   return (
     <>
       {isHiraganaPath ? (
-        <Menu title="Hiragana-Katakana Chapters" cols={1} items={[{ name: "Introduction", to: `${path}/introduction?page=1`, colSize: 2 }]} />
+        <Menu title="Hiragana-Katakana Chapters" cols={1} items={[{ name: "Introduction", to: `${path}/introduction/1`, colSize: 2 }]} />
       ) : (
         <Menu
           title={`${title} Chapters`}
           cols={2}
           items={[
-            { name: "Introduction", to: `${path}/introduction?page=1` },
-            { name: "Grammar", to: `${path}/grammar?page=1` },
-            { name: "Vocabulary", to: `${path}/vocabulary?page=1` },
-            // { name: "Kanji", to: `${path}/kanji?page=1` },
-            // { name: "Reading", to: `${path}/reading?page=1` },
-            { name: "Conversation", to: `${path}/conversation?page=1` },
+            { name: "Introduction", to: `${path}/introduction/1` },
+            { name: "Grammar", to: `${path}/grammar/1` },
+            { name: "Vocabulary", to: `${path}/vocabulary/1` },
+            // { name: "Kanji", to: `${path}/kanji/1` },
+            // { name: "Reading", to: `${path}/reading/1` },
+            { name: "Conversation", to: `${path}/conversation/1` },
           ]}
         />
       )}
